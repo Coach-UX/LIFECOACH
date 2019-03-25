@@ -5,7 +5,7 @@ var mapStyle = [{
         "saturation": 36
       },
       {
-        "color": "#231F20"
+        "color": "#000000"
       },
       {
         "lightness": 0
@@ -22,7 +22,7 @@ var mapStyle = [{
         "visibility": "off"
       },
       {
-        "color": "#231F20"
+        "color": "#000000"
       },
       {
         "lightness": 16
@@ -76,7 +76,7 @@ var mapStyle = [{
     "featureType": "administrative.country",
     "elementType": "labels.text.fill",
     "stylers": [{
-        "color": "#231F20"
+        "color": "#000000"
       },
       {
         "visibility": "off"
@@ -87,7 +87,7 @@ var mapStyle = [{
     "featureType": "administrative.province",
     "elementType": "labels.text.fill",
     "stylers": [{
-        "color": "#231F20"
+        "color": "#000000"
       },
       {
         "visibility": "on"
@@ -98,7 +98,7 @@ var mapStyle = [{
     "featureType": "administrative.locality",
     "elementType": "labels.text.fill",
     "stylers": [{
-        "color": "#231F20"
+        "color": "#000000"
       },
       {
         "visibility": "on"
@@ -113,18 +113,6 @@ var mapStyle = [{
       },
       {
         "lightness": 0
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "geometry.fill",
-    "stylers": [
-      {
-          "color": "#DF9CAF"
-      },
-      {
-        "visibility": "on"
       }
     ]
   },
@@ -154,7 +142,7 @@ var mapStyle = [{
     "featureType": "road.arterial",
     "elementType": "geometry",
     "stylers": [{
-        "color": "#231F20"
+        "color": "#202020"
       },
       {
         "weight": .09
@@ -165,7 +153,7 @@ var mapStyle = [{
     "featureType": "road.local",
     "elementType": "geometry",
     "stylers": [{
-        "color": "#231F20"
+        "color": "#202020"
       },
       {
         "weight": .09
@@ -176,7 +164,7 @@ var mapStyle = [{
     "featureType": "transit",
     "elementType": "geometry",
     "stylers": [{
-        "color": "#D190A3"
+        "color": "#202020"
       },
       {
         "weight": .09
@@ -213,29 +201,28 @@ function initialize() {
   var markers = new Array();
 
   var mapOptions = {
-    zoom: 15,
-    center: new google.maps.LatLng(35.674970, 139.722029),
+    zoom: 15.2,
+    center: new google.maps.LatLng(40.722500, -74.001380),
     styles: mapStyle,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true,
-    gestureHandling: 'greedy',
     backgroundColor: '#DF9CAF'
   };
 
+
+
   var locations = [
-    [
-      // INFOWINDOW CTA
-      'アクセス',
+    ['Get Directions ',
       // LATITUDE
-      35.674970,
+      40.722100,
       // LONGITUDE
-      139.722029,
+      -74.001380,
       // ?
       1,
       // MARKER
       'img/marker.svg',
       // DIRECTIONS LINK
-      'https://maps.google.com?daddr=Kitaaoyama,+Minato,+Tokyo+107-0061,+Japan'
+      'https://maps.google.com?daddr=107+Grand+St,+New+York,+NY+10013'
     ]
   ];
 
@@ -254,52 +241,54 @@ function initialize() {
               url: locations[i][5],
               icon: {
                   url: locations[i][4],
-                  scaledSize: new google.maps.Size(55, 77.56),
+                  scaledSize: new google.maps.Size(63.82, 90),
                   }
           });
-
-          var infowindow = new google.maps.InfoWindow();
-
-          infowindow.setContent('<div class="infowindow" style="width:auto; height:auto;padding: 10% 0 10% 0; text-align: center;">' +
-            '<a href="' +
-            locations[i][5] +
-            '" target="_blank">' +
-            locations[i][0] +
-            "</a>"
-          );
-
-          google.maps.event.addListener(marker, 'click', (function(marker, i) {
-
-            return function() {
-
-
-              infowindow.open(map, marker);
-            }
-
-          })(marker, i));
+          //
+          // var infowindow = new google.maps.InfoWindow();
+          //
+          // infowindow.setContent('<div class="infowindow" style="width:auto; height:auto; text-align: center;">' +
+          //   '<a href="' +
+          //   locations[i][5] +
+          //   '" target="_blank">' +
+          //   "<h3>" +
+          //   locations[i][0] +
+          //   "</h3>" +
+          //   "</a>"
+          // );
+          //
+          // google.maps.event.addListener(marker, 'click', (function(marker, i) {
+          //
+          //   return function() {
+          //
+          //
+          //     infowindow.open(map, marker);
+          //   }
+          //
+          // })(marker, i));
 
 // SHOW TOOLTIP BY DEFAULT
-
-          markers.push(marker);
-
-          infowindow.open(map, marker);
+          //
+          // markers.push(marker);
+          //
+          // infowindow.open(map, marker);
 
   }
 
-//   google.maps.event.addListener(marker, 'click', function() {
-//     window.open(this.url, '_blank');
-// });
-//
-//   $('.marker-link').on('click', function() {
-//
-//     google.maps.event.trigger(markers[$(this).data('markerid')], 'click');
-//   });
-//
-//   google.maps.event.addListener(map, 'click', function(event) {
-//     if (infowindow) {
-//       infowindow.close();
-//     }
-//   });
+  google.maps.event.addListener(marker, 'click', function() {
+    window.open(this.url, '_blank');
+});
+
+  $('.marker-link').on('click', function() {
+
+    google.maps.event.trigger(markers[$(this).data('markerid')], 'click');
+  });
+
+  google.maps.event.addListener(map, 'click', function(event) {
+    if (infowindow) {
+      infowindow.close();
+    }
+  });
 
 }
 
