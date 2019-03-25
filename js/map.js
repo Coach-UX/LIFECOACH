@@ -217,9 +217,9 @@ function initialize() {
       '',
       'Get Directions ',
       40.722100, -74.001380, 1,
-      'img/marker-3.svg',
+      'img/marker.svg',
       '',
-      'img/murals/1.jpg', 
+      'img/murals/1.jpg',
       '',
       'https://maps.google.com?daddr=107+Grand+St,+New+York,+NY+10013'
     ]
@@ -240,7 +240,7 @@ function initialize() {
               url: locations[i][11],
               icon: {
               url: locations[i][7],
-              scaledSize: new google.maps.Size(300, 20.13),
+              scaledSize: new google.maps.Size(63.82, 90),
             }
           });
           //

@@ -486,7 +486,7 @@ a {
 .visitors {
   position: relative;
   top: 50%;
-  left: 67%;
+  left: 63%;
   transform: translate(-50%, -50%);
 }
 
@@ -713,11 +713,20 @@ div#single-song-player div.bottom-container div.control-container:after {
   margin-top: -24%;
 }
 
+.bw-video {
+  filter: grayscale(100);
+  position: relative;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
 .modal-content {
   top: 50%;
   position: absolute;
   /* height: 100%; */
-  margin-top: -24%;
+  /* margin-top: -24%; */
+  margin-top: -20%;
 }
 
 #animatedModal, #modal-02 {
@@ -886,6 +895,14 @@ div#single-song-player div.bottom-container div.control-container:after {
   margin-top: 43%;
 }
 
+.featuring-2 {
+  position: absolute;
+  width: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 48%;
+}
+
 #programming, #programming-m {
   background-image: url("bg/sig-c.png");
   background-repeat: no-repeat;
@@ -959,7 +976,7 @@ height: 90%;
   display: inline-block;
   left: 10%;
   line-height: 1.6vw;
-  width: 60%; 
+  width: 60%;
 }
 
 .programming-cta {
