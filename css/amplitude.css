@@ -1,0 +1,135 @@
+div#single-song-player {
+  width: 100%;
+  height: 100%;
+}
+div#single-song-player img[amplitude-song-info="cover_art_url"] {
+  width: 100%;
+
+}
+div#single-song-player div.bottom-container {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+div#single-song-player div.bottom-container progress.amplitude-song-played-progress:not([value]) {
+  background-color: white;
+}
+div#single-song-player div.bottom-container progress.amplitude-song-played-progress {
+  background-color: white;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  z-index: -100;
+}
+div#single-song-player div.bottom-container progress[value]::-webkit-progress-bar {
+  background-color: white;
+}
+div#single-song-player div.bottom-container progress[value]::-moz-progress-bar {
+  background-color: #CD1E16;
+}
+div#single-song-player div.bottom-container progress[value]::-webkit-progress-value {
+  background-color: #FDBD28;
+}
+div#single-song-player div.bottom-container div.time-container {
+  opacity: 1;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 100;
+  font-size: 1vw;
+  color: black;
+  height: 20px;
+}
+div#single-song-player div.bottom-container div.time-container span.current-time {
+  float: left;
+  margin-left: 5%;
+}
+div#single-song-player div.bottom-container div.time-container span.duration {
+  float: right;
+  margin-right: 5%;
+}
+div#single-song-player div.bottom-container div.control-container {
+  margin-top: 1%;
+  padding-bottom: 3%;
+}
+div#single-song-player div.bottom-container div.control-container div.amplitude-play-pause {
+  width: 2.2vw;
+  height: 3vw;
+  cursor: pointer;
+  float: left;
+  margin-left: 7%;
+  margin-top: 2%;
+}
+div#single-song-player div.bottom-container div.control-container div.amplitude-play-pause:hover {
+  opacity: .8;
+}
+.logo img {
+  width: 10%;
+  height: auto;
+  cursor: pointer;
+  position: absolute;
+  right: 7%;
+  top: 33%;
+}
+div#single-song-player div.bottom-container div.control-container div.amplitude-play-pause.amplitude-paused {
+  background: url('bg/play.png');
+  background-size: cover;
+}
+div#single-song-player div.bottom-container div.control-container div.amplitude-play-pause.amplitude-playing {
+  background: url('bg/pause.png');
+  background-size: cover;
+}
+div#single-song-player div.bottom-container div.control-container div.meta-container {
+  float: none;
+  width: calc(100% - 84px);
+  text-align: left;
+  color: black;
+  margin-top: 7%;
+  padding-left: 19%;
+}
+div#single-song-player div.bottom-container div.control-container div.meta-container span[amplitude-song-info="name"] {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2vw;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: black;
+  display: block;
+}
+div#single-song-player div.bottom-container div.control-container div.meta-container span[amplitude-song-info="artist"] {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 2vw;
+  text-transform: uppercase;
+  color: black;
+  display: block;
+}
+div#single-song-player div.bottom-container div.control-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 600px) {
+  div#single-song-player div.bottom-container div.control-container div.meta-container span[amplitude-song-info="name"] {
+    font-size: 5vw;
+  }
+div#single-song-player div.bottom-container div.control-container div.meta-container span[amplitude-song-info="artist"] {
+  font-size: 5vw;
+}
+div#single-song-player div.bottom-container div.control-container div.amplitude-play-pause {
+  width: 6vw;
+  height: 8vw;
+  margin-left: 7%;
+}
+.logo img {
+  width: 11%;
+  right: 7%;
+}
+div#single-song-player div.bottom-container div.control-container div.meta-container {
+  padding-left: 20%;
+}
+
+}
