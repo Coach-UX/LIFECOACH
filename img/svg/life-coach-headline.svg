@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="723px" height="157px" viewBox="0 0 723 157" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>life coach will see you now</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-8.9%" y="-57.7%" width="117.8%" height="215.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Knockout-HTF94-UltmtSumo, Knockout" font-size="50" font-weight="normal">
+        <g id="Desktop-Copy" transform="translate(-358.000000, -123.000000)" fill="#FFFFFF">
+            <g id="Main">
+                <g id="life-coach-will-see-you-now" filter="url(#filter-1)" transform="translate(382.000000, 146.000000)">
+                    <g id="Group-11" transform="translate(0.000000, 44.000000)">
+                        <text id="NOW" letter-spacing="-0.795912623">
+                            <tspan x="501.103658" y="50">N</tspan>
+                            <tspan x="548.207745" y="50" letter-spacing="-0.63070178">OW  </tspan>
+                        </text>
+                        <text id="YOU--" letter-spacing="-3.74999976">
+                            <tspan x="349.321597" y="50">Y</tspan>
+                            <tspan x="392.821597" y="50" letter-spacing="-2.97159696">OU  </tspan>
+                        </text>
+                        <text id="WILL--">
+                            <tspan x="12.85" y="50">WILL  </tspan>
+                        </text>
+                        <text id="SEE--">
+                            <tspan x="202.525" y="50">SEE  </tspan>
+                        </text>
+                    </g>
+                    <g id="Group-12" transform="translate(59.000000, 0.000000)">
+                        <text id="THE--">
+                            <tspan x="13.605" y="50">THE  </tspan>
+                        </text>
+                        <text id="LIFE--">
+                            <tspan x="164.725" y="51">LIFE  </tspan>
+                        </text>
+                        <text id="COACH-" letter-spacing="-1">
+                            <tspan x="327.984852" y="50">C</tspan>
+                            <tspan x="371.284852" y="50" letter-spacing="-0.792425931">OACH </tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
